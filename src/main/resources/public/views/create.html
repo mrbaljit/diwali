@@ -1,0 +1,59 @@
+<form class="form-horizontal" role="form" ng-submit="createTodo()">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" placeholder="name" ng-model="todo.name" required>
+        </div>
+        <div role="alert">
+      <span class="error" ng-show="form.name.$error.required">
+       Required!</span>
+        </div>
+      </div>
+        <div class="form-group">
+        <label for="starters" class="col-sm-2 control-label">Starter</label>
+        <div class="col-sm-10 dropdown">
+            <select class="form-control" id="starters" name="starters" ng-model="todo.starter" required
+                    ng-options="c.code as c.name for c in starters" >
+                <option value="">Select starters</option>
+            </select>
+        </div>
+        <div role="alert">
+            <span class="error" ng-show="form.starters.$error.required">Required!</span>
+        </div>
+        </div>
+
+    <div class="form-group">
+        <label for="mains" class="col-sm-2 control-label">Mains</label>
+        <div class="col-sm-10 dropdown">
+            <select class="form-control" id="mains" name="mains" ng-model="todo.mains" required
+                    ng-options="c.code as c.name for c in mains" >
+                <option value="">Select mains</option>
+            </select>
+        </div>
+        <div role="alert">
+            <span class="error" ng-show="form.mains.$error.required">Required!</span>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="spicy" class="col-sm-2 control-label">Spiciness</label>
+        <div class="col-sm-10 dropdown">
+            <select class="form-control" id="spicy" name="spicy" ng-model="todo.spicy" required
+                    ng-options="c.code as c.name for c in spiciness" >
+                <option value="">Select spiciness</option>
+            </select>
+        </div>
+        <div role="alert">
+            <span class="error" ng-show="form.spicy.$error.required">Required!</span>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </div>
+    </div>
+    <img src="../ivillage_menu.png" class="img-rounded" border="1">
+
+</form>

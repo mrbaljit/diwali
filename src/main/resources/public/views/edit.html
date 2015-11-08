@@ -1,0 +1,55 @@
+<form class="form-horizontal" role="form" ng-submit="updateTodo()">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" placeholder="name" ng-model="todo.name">
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="starter" class="col-sm-2 control-label">Starter</label>
+        <div class="col-sm-10 dropdown">
+            <select id="starter" class="form-control" ng-model="todo.starter">
+                <option value="Tandoori Trio">Tandoori Trio</option>
+                <option value="Gilafi Seekh Kabab">Gilafi Seekh Kabab</option>
+                <option value="Tandoori Gulnar">Tandoori Gulnar</option>
+                <option value="Tandoori Vegetarian Salad">Tandoori Vegetarian Salad</option>
+                <option value="I Bullets">I Bullets</option>
+                <option value="Lal Mirch Ka Paneer">Lal Mirch Ka Paneer</option>
+            </select>
+        </div>
+            </div>
+        <div class="form-group">
+        <label for="mains" class="col-sm-2 control-label">Mains</label>
+        <div class="col-sm-10 dropdown">
+            <select id="mains" class="form-control" ng-model="todo.mains">
+                <option value="Handi Chicken">Handi Chicken</option>
+                <option value="Rogan Josh">Rogan Josh</option>
+                <option value="Tandoori Murg Makhanwala">Tandoori Murg Makhanwala</option>
+                <option value="Tawa ka Kukkad">Tawa ka Kukkad</option>
+                <option value="Kadhai Sabji">Kadhai Sabji</option>
+                <option value="Himalayan Hariyali">Himalayan Hariyali</option>
+                <option value="Shahi Paneer Kofta">Shahi Paneer Kofta</option>
+            </select>
+        </div>
+        </div>
+        <div class="form-group">
+        <label for="spicy" class="col-sm-2 control-label">Spiciness</label>
+        <div class="col-sm-10 dropdown">
+            <select id="spicy" class="form-control" ng-model="todo.spicy">
+                <option value="Mild">Mild</option>
+                <option value="Medium">Medium</option>
+                <option value="Hot">Hot</option>
+                <option value="Extra Hot">Extra Hot</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Update Order</button>
+        </div>
+    </div>
+
+    <img src="../ivillage_menu.png" class="img-rounded">
+
+</form>

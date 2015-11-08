@@ -1,0 +1,36 @@
+<h2>Diwali Lunch @ iVillage<a class="btn btn-primary pull-right" href="#/create"><i
+        class="icon-plus-sign icon-white"></i> Place Order</a></h2>
+
+<table class="table table-hover">
+<tr>
+    <tr>
+        <th>#</th>
+        <th ng-click="reverse=!reverse;order('name', reverse)">Name&nbsp;&nbsp;<span class="glyphicon glyphicon-sort">&nbsp;&nbsp;  </span></th>
+        <th ng-click="reverse=!reverse;order('starter', reverse)">Starter&nbsp;&nbsp;<span class="glyphicon glyphicon-sort">&nbsp;&nbsp;  </span></th>
+        <th ng-click="reverse=!reverse;order('mains', reverse)">Mains&nbsp;&nbsp;<span class="glyphicon glyphicon-sort">&nbsp;&nbsp;  </span></th>
+        <th ng-click="reverse=!reverse;order('spicy', reverse)">Spiciness&nbsp;&nbsp;<span class="glyphicon glyphicon-sort">&nbsp;&nbsp;  </span></th>
+    <th></th>
+    </tr>
+
+
+</tr>
+    <tr class="success-{{todo.name}}" ng-repeat="todo in todos">
+        <td>{{$index+1}}</td>
+        <td>
+            {{todo.name}}
+        </td>
+        <td>
+            {{todo.starter}}
+        </td>
+        <td>
+            {{todo.mains}}
+        </td>
+        <td>
+            {{todo.spicy}}
+        </td>
+        <td>
+            <a class="btn btn-secondary pull-right" href="#/edit/{{todo.id}}"><i
+                    class="glyphicon glyphicon-edit"></i></a>
+        </td>
+    </tr>
+</table>
